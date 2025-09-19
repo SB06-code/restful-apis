@@ -1,0 +1,17 @@
+### GET User info
+GET http://localhost:8080/users/1000
+
+### GET User(9999) info
+GET http://localhost:8080/users/9999
+
+### POST User
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Gyutae Ha",
+  "email": "gted221@gmail.com"
+}
+
+### Search Users
+GET http://localhost:8080/users/_search
