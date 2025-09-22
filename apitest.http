@@ -5,6 +5,13 @@ GET http://localhost:8080/users/1000
 GET http://localhost:8080/users/hello
 Accept: application/vnd.sb06.v2+json
 
+### GET User info V3 (HATEOAS)
+GET http://localhost:8080/users/hello
+Accept: application/vnd.sb06.v3+json
+
+### GET all users
+GET http://localhost:8080/users
+
 ### GET User(9999) info
 GET http://localhost:8080/users/9999
 
