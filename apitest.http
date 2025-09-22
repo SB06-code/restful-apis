@@ -1,6 +1,10 @@
 ### GET User info
 GET http://localhost:8080/users/1000
 
+### GET User info V2
+GET http://localhost:8080/users/hello
+Accept: application/vnd.sb06.v2+json
+
 ### GET User(9999) info
 GET http://localhost:8080/users/9999
 

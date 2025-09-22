@@ -26,6 +26,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
+    @GetMapping(value = "/{id}", produces = "application/vnd.sb06.v2+json")
+    public ResponseEntity<UserResponseV2> getUserV2(
+            @PathVariable("id") String userId
+    ) {
+        UserResponseV2 response = new UserResponseV2(userId, "Gyutae Ha", "gted221@gmail.com");
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+    }
+
     @PostMapping
     public ResponseEntity<UserResponse> createUser(@RequestBody @Valid UserRequest request) {
         UserResponse created = new UserResponse(1001L, request.name(), request.email());
