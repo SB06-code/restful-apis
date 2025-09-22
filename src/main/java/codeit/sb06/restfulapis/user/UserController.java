@@ -1,6 +1,7 @@
 package codeit.sb06.restfulapis.user;
 
 import codeit.sb06.restfulapis.user.exception.UserNotFoundException;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
@@ -18,6 +19,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @Slf4j
 @RestController
 @RequestMapping("/users")
+@Tag(name = "User", description = "사용자 관련 API")
 public class UserController {
 
     @GetMapping("/{id}")
